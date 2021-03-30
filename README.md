@@ -1,1 +1,1 @@
-# Capstone
+# Basic Computer Architecture Scripts
