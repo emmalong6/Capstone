@@ -10,3 +10,4 @@ Three scripts to help students practice equations used in Basic Computer Archite
 ## Installation
 ## Usage
 ## License
+[MIT License](https://github.com/emmalong6/Capstone/blob/main/LICENSE)
