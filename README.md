@@ -9,7 +9,7 @@ Three scripts to help students practice equations used in Basic Computer Archite
 ## Introduction
 
 ## Installation
-*download and run with any Python compiler
+* download and run with any Python compiler
 ## Usage
 
 ## License
