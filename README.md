@@ -7,7 +7,10 @@ Three scripts to help students practice equations used in Basic Computer Archite
 3. Usage
 4. License
 ## Introduction
+
 ## Installation
+*download and run with any Python compiler
 ## Usage
+
 ## License
-[MIT License](https://github.com/emmalong6/Capstone/blob/main/LICENSE)
+This project uses the [MIT License](https://github.com/emmalong6/Capstone/blob/main/LICENSE).
