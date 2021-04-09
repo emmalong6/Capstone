@@ -232,7 +232,7 @@ def testKnowledge():
                 print("What is 2's complement for: ",randomNum)
                 while True:
                     try:
-                        print(result)
+                        #print(result)
                         answer = input("What is your answer? ")
                         if result == answer:
                                 print("Correct!\n")

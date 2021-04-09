@@ -154,7 +154,7 @@ def testKnowledge():
         gray_code = convert_gray(binary_num)
         stringLength = pad_gray_string(gray_code)
         print("What is the gray code for: ",randomNum)
-        print("Grey Code is: ",stringLength)
+        #print("Grey Code is: ",stringLength)
         while True:
             try:
                 answer = input("What is your answer in 8 bit length? ")

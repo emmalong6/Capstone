@@ -171,7 +171,7 @@ please enter the number associate with your choice:''')
         period = pulse + pause
         freq = 1000 / period #measures in Hz
         f = round(freq,2)
-        print(f)
+        #print(f)
         while True:
             try:
                 answer = float(input("What is your answer rounded to two decimal places in Hz? "))
@@ -207,7 +207,7 @@ please enter the number associate with your choice:''')
         period = pulse + pause
         freq = 1000 / period #change to measure in Kilo Hz
         f = round(freq,2)
-        print(f)
+        #print(f)
         while True:
             try:
                 answer = float(input("What is your answer rounded to two decimal places in kHz? "))
@@ -243,7 +243,7 @@ please enter the number associate with your choice:''')
         period = pulse + pause
         freq = 1000 / period #change to measure in Mega Hz
         f = round(freq,2)
-        print(f)
+        #print(f)
         while True:
             try:
                 answer = float(input("What is your answer rounded to two decimal places in MHz? "))
