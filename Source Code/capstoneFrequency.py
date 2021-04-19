@@ -71,7 +71,7 @@ please enter the number associate with your choice:''')
             if choice == '1':
                 milliFreq()
             elif choice == '2':
-                print("The program has ended.\n")
+                #print("The program has ended.\n")
                 break
             else:
                 print("Invalid response\n")
@@ -102,7 +102,7 @@ please enter the number associate with your choice:''')
             if choice == '1':
                 microFreq()
             elif choice == '2':
-                print("The program has ended.\n")
+                #print("The program has ended.\n")
                 break
             else:
                 print("Invalid response\n")
@@ -133,7 +133,7 @@ please enter the number associate with your choice:''')
             if choice == '1':
                 nanoFreq()
             elif choice == '2':
-                print("The program has ended.\n")
+                #print("The program has ended.\n")
                 break
             else:
                 print("Invalid response\n")
@@ -172,16 +172,33 @@ please enter the number associate with your choice:''')
         freq = 1000 / period #measures in Hz
         f = round(freq,2)
         #print(f)
-        while True:
-            try:
-                answer = float(input("What is your answer rounded to two decimal places in Hz? "))
-                if f == answer:
-                    print("Correct!\n")
-                    break
-                else:
-                    print("Try again")
-            except:
-                continue
+
+        def test():
+            while True:
+                try:
+                    answer = float(input("What is your answer rounded to two decimal places in Hz? "))
+                    if f == answer:
+                        print("Correct!\n")
+                        break
+                    else:
+                        def loopAnswer():
+                            print("Would you like to try again or see answer?")
+                            print("1 Try again")
+                            print("2 Let's see the answer")
+            
+                        while True:
+                            loopAnswer()
+                            choice = input("What is your choice? ")
+                            if choice == '1':
+                                test()
+                            elif choice == '2':
+                                print(f)
+                                break
+                            else:
+                                print("Invalid response\n")
+                except:
+                    continue
+        test()
 
         def anotherMenu():
             print("Would you like to go again or choose another unit of measurment?")
@@ -194,7 +211,6 @@ please enter the number associate with your choice:''')
             if choice == '1':
                 milliFreq()
             elif choice == '2':
-                print("The program has ended.\n")
                 break
             else:
                 print("Invalid response\n")
@@ -208,16 +224,32 @@ please enter the number associate with your choice:''')
         freq = 1000 / period #change to measure in Kilo Hz
         f = round(freq,2)
         #print(f)
-        while True:
-            try:
-                answer = float(input("What is your answer rounded to two decimal places in kHz? "))
-                if f == answer:
-                    print("Correct!\n")
-                    break
-                else:
-                    print("Try again")
-            except:
-                continue
+        def test():
+            while True:
+                try:
+                    answer = float(input("What is your answer rounded to two decimal places in Hz? "))
+                    if f == answer:
+                        print("Correct!\n")
+                        break
+                    else:
+                        def loopAnswer():
+                            print("Would you like to try again or see answer?")
+                            print("1 Try again")
+                            print("2 Let's see the answer")
+            
+                        while True:
+                            loopAnswer()
+                            choice = input("What is your choice? ")
+                            if choice == '1':
+                                test()
+                            elif choice == '2':
+                                print(f)
+                                break
+                            else:
+                                print("Invalid response\n")
+                except:
+                    continue
+        test()
 
         def anotherMenu():
             print("Would you like to go again or choose another unit of measurment?")
@@ -244,16 +276,32 @@ please enter the number associate with your choice:''')
         freq = 1000 / period #change to measure in Mega Hz
         f = round(freq,2)
         #print(f)
-        while True:
-            try:
-                answer = float(input("What is your answer rounded to two decimal places in MHz? "))
-                if f == answer:
-                    print("Correct!\n")
-                    break
-                else:
-                    print("Try again")
-            except:
-                continue
+        def test():
+            while True:
+                try:
+                    answer = float(input("What is your answer rounded to two decimal places in Hz? "))
+                    if f == answer:
+                        print("Correct!\n")
+                        break
+                    else:
+                        def loopAnswer():
+                            print("Would you like to try again or see answer?")
+                            print("1 Try again")
+                            print("2 Let's see the answer")
+            
+                        while True:
+                            loopAnswer()
+                            choice = input("What is your choice? ")
+                            if choice == '1':
+                                test()
+                            elif choice == '2':
+                                print(f)
+                                break
+                            else:
+                                print("Invalid response\n")
+                except:
+                    continue
+        test()
 
         def anotherMenu():
             print("Would you like to go again or choose another unit of measurment?")

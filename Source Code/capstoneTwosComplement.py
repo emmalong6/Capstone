@@ -1,17 +1,17 @@
 #Basic Computer Architecture Calculations
 # based off code from geeksforgeeks.org - mits
+# Twos Complement
 import random
 
 def showMenu():
-    print("Choose which method of practice for calculating frequency you would like:")
+    print("Choose which method of practice for calculating twos complement you would like:")
     print("1 Show Example/Instructions")
     print("2 Enter Own Data")
     print("3 Test Your Knowledge")
     print("4 Exit the Program")
 
 def exampleInstructions():
-    print('''The result of adding an n-bit number to its one's complement is always an n-bit number
-with ones in every position. If we add 1 to that result, our new value is an n-bit number with zeros
+    instructions = '''The result of adding an n-bit number to its one's complement is always an n-bit number\nwith ones in every position. If we add 1 to that result, our new value is an n-bit number with zeros
 in every position and an overflow or carry to the next highest position, the (n+1)th column which corresponding
 to 2n. For our 8-bit example above, the result of adding 100101102 to 011010012 is 111111112. Adding 1 to
 this number gives us 000000002 with an overflow carry of 1 to the ninth or 28 column. If we restrict
@@ -84,7 +84,19 @@ complement of a binary number? Well, let's see. The binary value for 4510 is 001
 It worked! The second time the 2's complement was taken, the pattern of ones and zeros returned to their original values. It turns out
 that this is true for any binary number of a fixed number of bits.
 
-(From: Computer Organization and Design Fundamentals by David Tarnoff)\n''')
+(From: Computer Organization and Design Fundamentals by David Tarnoff)\n'''
+
+    class Less(object):
+        def __init__(self, num_lines):
+            self.num_lines = num_lines
+        def __ror__(self, other):
+            s = str(instructions).split("\n")
+            for i in range(0, len(s), self.num_lines):
+                print(*s[i: i + self.num_lines], sep="\n")
+                input("Press <Enter> for more")
+
+    less = Less(num_lines=30)  
+    "\n".join(map(str, range(100))) | less
 
 def enterOwnData():
     def run():
@@ -95,7 +107,7 @@ def enterOwnData():
                     # Size of an integer is assumed to be 8 bits 
                     # Function that convert Decimal to binary 
                     while True:  
-                            n = int(input("Please enter a number: ")) 
+                            n = int(input("Please enter a decimal number: ")) 
                             if (n < 257):
                                 binary = ""
                                 for i in range(7, -1, -1):  
@@ -230,20 +242,35 @@ def testKnowledge():
                 result = printTwosComplement(binary_num)
 
                 print("What is 2's complement for: ",randomNum)
-                while True:
-                    try:
-                        #print(result)
-                        answer = input("What is your answer? ")
-                        if result == answer:
+                def test():
+                    while True:
+                        try:
+                            answer = input("What is your answer in 8 bit length? ")
+                            if result == answer:
                                 print("Correct!\n")
                                 break
-                        else:
-                            print("Try again")
-                    except:
-                        continue
-                break
+                            else:
+                                def loopAnswer():
+                                    print("Would you like to try again or see answer?")
+                                    print("1 Try again")
+                                    print("2 Let's see the answer")
+                            
+                                while True:
+                                    loopAnswer()
+                                    choice = input("What is your choice? ")
+                                    if choice == '1':
+                                        test()
+                                    elif choice == '2':
+                                        print(result)
+                                        break
+                                    else:
+                                        print("Invalid response\n")
+                        except:
+                            continue
+                test()
             except ValueError:
                 print("Not valid input")
+            break
     run()
 
     def anotherMenu():

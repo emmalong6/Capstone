@@ -10,7 +10,7 @@ def showMenu():
     print("4 Exit the Program")
 
 def exampleInstructions():
-    print('''The use of binary counting sequences is common in digital applications. For
+    instructions = '''The use of binary counting sequences is common in digital applications. For
 example, an n-bit binary value can be used to identify the position of a rotating shaft as 
 being within one of 2n different arcs.
 
@@ -77,7 +77,18 @@ Decimal     Binary      Binaryw/starting zero   Gray Code
 14          1 1 1 0     0 1 1 1 0               1 0 0 1
 15          1 1 1 1     0 1 1 1 1               1 0 0 0
 
-(From: Computer Organization and Design Fundamentals by David Tarnoff)\n''')
+(From: Computer Organization and Design Fundamentals by David Tarnoff)\n'''
+    class Less(object):
+        def __init__(self, num_lines):
+            self.num_lines = num_lines
+        def __ror__(self, other):
+            s = str(instructions).split("\n")
+            for i in range(0, len(s), self.num_lines):
+                print(*s[i: i + self.num_lines], sep="\n")
+                input("Press <Enter> for more")
+
+    less = Less(num_lines=30)  
+    "\n".join(map(str, range(100))) | less
 
 def enterOwnData():
     while True:
@@ -85,7 +96,7 @@ def enterOwnData():
             #Grey Code
             def toBinary():
                 while True:    
-                    n = int(input("Please enter a number: "))
+                    n = int(input("Please enter a decimal number: "))
                     if (n < 1025):
                         binary = ""
                         for i in range(16, -1, -1):  
@@ -155,16 +166,32 @@ def testKnowledge():
         stringLength = pad_gray_string(gray_code)
         print("What is the gray code for: ",randomNum)
         #print("Grey Code is: ",stringLength)
-        while True:
-            try:
-                answer = input("What is your answer in 8 bit length? ")
-                if stringLength == answer:
+        def test():
+            while True:
+                try:
+                    answer = input("What is your answer in 8 bit length? ")
+                    if stringLength == answer:
                         print("Correct!\n")
                         break
-                else:
-                    print("Try again")
-            except:
-                continue
+                    else:
+                        def loopAnswer():
+                            print("Would you like to try again or see answer?")
+                            print("1 Try again")
+                            print("2 Let's see the answer")
+            
+                        while True:
+                            loopAnswer()
+                            choice = input("What is your choice? ")
+                            if choice == '1':
+                                test()
+                            elif choice == '2':
+                                print(stringLength)
+                                break
+                            else:
+                                print("Invalid response\n")
+                except:
+                    continue
+        test()
     run()
 
     def anotherMenu():
