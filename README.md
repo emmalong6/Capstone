@@ -16,12 +16,27 @@ These python scripts calculate frequency, grey code, and twos complement. I desi
 * Download
 * Run with any Python compiler
 
+## Technologies
+I used python to develop my caculator scripts. Here is a sample of code that was used in both the grey code and twos complement scripts to convert decimal numbers into binary.
+'''python
+n = int(input("Please enter a decimal number: "))
+if (n < 1025):
+  binary = ""
+  for i in range(16, -1, -1):  
+    k = n >> i
+    if (k & 1): 
+      binary += "1"
+    else: 
+      binary += "0"
+  return binary
+else:
+  print("Please unter a number from 0 to 1024 inclusive")
+  continue
+'''
+
 ## Usage
-1. Run the program with your chosen compiler. (Here I am using Visual Studio Code)
-
-
-
-2. Now input your choice directly from the command line.
+1. Run any of the three scripts with the python compiler of your choosing.
+2. With all three scripts, you can then input your choices in the command line.
 
 
 ## License
