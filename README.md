@@ -10,7 +10,7 @@ Three scripts to help students practice equations used in Basic Computer Archite
 4. License
 
 ## Introduction
-These python scripts calculate frequency, grey code, and twos complement. I designed these scripts for students taking Basic Computer Architecture class to practice their skills. These programs run directly from the command line.
+Python scripts that calculate frequency, grey code, and twos complement. I designed these scripts for students taking Basic Computer Architecture class to practice their skills. These programs run directly from the command line.
 
 ## Installation
 * Download
