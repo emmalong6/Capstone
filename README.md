@@ -1,8 +1,5 @@
 # Basic Computer Architecture Scripts
 
-#### Description
-Three scripts to help students practice equations used in Basic Computer Architecture.
-
 ### Table of Contents
 1. Introduction
 2. Installation
@@ -10,7 +7,7 @@ Three scripts to help students practice equations used in Basic Computer Archite
 4. License
 
 ## Introduction
-Python scripts that calculate frequency, grey code, and twos complement. I designed these scripts for students taking Basic Computer Architecture class to practice their skills. These programs run directly from the command line.
+I designed three scripts to help students practice equations used in Basic Computer Architecture. I used python to program each script that calculates frequency, grey code, and twos complement. These programs run directly from the command line in the python compiler of your choice.
 
 ## Installation
 * Download
@@ -35,9 +32,8 @@ else:
 ```
 
 ## Usage
-1. Run any of the three scripts with the python compiler of your choosing.
-2. With all three scripts, you can then input your choices in the command line.
-
+1. Run the programs with the python compiler of your choosing.
+2. With all three scripts, input your choices in the command line by entering the number associated with your choice.
 
 ## License
 This project uses the [MIT License](https://github.com/emmalong6/Capstone/blob/main/LICENSE).
