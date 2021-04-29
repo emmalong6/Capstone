@@ -34,6 +34,10 @@ else:
 ## Usage
 1. Run the programs with the python compiler of your choosing.
 2. With all three scripts, input your choices in the command line by entering the number associated with your choice.
+3. An input of the number '1' will display examples and instructions
+4. An input of the number '2' will allow you to input your own data and receive answers for the given information
+5. An input of the number '3' will test your knowledge for given numbers
+6. An input of the number '4' will exit the programs
 
 ## License
 This project uses the [MIT License](https://github.com/emmalong6/Capstone/blob/main/LICENSE).
